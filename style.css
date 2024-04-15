@@ -75,3 +75,32 @@ html, body{
     height: 100%;
     object-fit: cover;
 }
+
+#page1-content{
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    height: 40vh;
+    width: 50vw;
+    /* background: red; */
+}
+
+#page1-content>h1{
+    font-family: a;
+    font-size: 120px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 1;
+}
+
+#page1-content-inner{
+    position: absolute;
+    bottom: 0%;
+    height: 35%;
+    width: 100%;
+    background: yellow;
+}
+
+#page1-content-inner>h4{
+    font-size: ;
+}
