@@ -95,12 +95,33 @@ html, body{
 
 #page1-content-inner{
     position: absolute;
-    bottom: 0%;
+    bottom: -5%;
     height: 35%;
     width: 100%;
-    background: yellow;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
 }
 
 #page1-content-inner>h4{
-    font-size: ;
+    font-family:a;
+    font-size:24px ;
+    color: #fff;
+    font-weight: 100;
+    width: 50%;
+}
+
+#page1-content-inner>button{
+    padding: 15px 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0c4cf4;
+    font-family: a;
+    font-weight: 100;
+    border-radius: 50px;
+    border: none;
+    right: 25%;
+    bottom: 10%;
+    position: absolute;
+    letter-spacing: 1px;
 }
