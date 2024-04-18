@@ -41,17 +41,15 @@ document.querySelector("#page2>h1").textContent.split('').forEach(function(dets)
 
 
 gsap.to("#page2>h1>span",{
-    ScrollTrigger: {
-        trigger: "#page2>h1>span",
-        scroller:"#main",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: .2,
-        markers:true,
-        // start: `top bottom`,
-        // end: `bottom top`,
-    },
-    stagger: .1,
-    color: `#fff`,
+  scrollTrigger: {
+    trigger: "#page2>h1>span",
+    scroller:"#main",
+    start: "top 95%",
+    end: "bottom 45%",
+    scrub:.5,
+    markers:true,
+  },
+  stagger: .2,
+  color: `#fff`,
 })
 
