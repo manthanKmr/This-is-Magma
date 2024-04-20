@@ -644,22 +644,268 @@ gsap.to("#page7-circle-inner",{
   backgroundColor: "#0a3bc391"
 })
 
-// var clutter = "";
-// document.querySelector("#page11-left #page11-left-textcontent #textcontent1").textContent.split('').forEach(function(dets){
-//     clutter += `<span>${dets}</span>`
+function canvas3(){
+  const canvas = document.querySelector("#page11-right>canvas");
+const context = canvas.getContext("2d");
 
-//     document.querySelector("#page11-left #page11-left-textcontent #textcontent1").innerHTML = clutter;
-// })
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-// gsap.to("#page11-left #page11-left-textcontent #textcontent1",{
-//   scrollTrigger: {
-//     trigger: "#page11-left #page11-left-textcontent #textcontent1",
-//     scroller:"#main",
-//     start: "top bottom",
-//     end: "bottom top",
-//     scrub:.5,
-//     // markers:true,
-//   },
-//   stagger: .2,
-//   color: `#fff`,
-// })
+
+window.addEventListener("resize", function () {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+render();
+});
+
+function files(index) {
+var data = `
+
+https://thisismagma.com/assets/home/roadmap/seq/1.webp
+https://thisismagma.com/assets/home/roadmap/seq/2.webp
+https://thisismagma.com/assets/home/roadmap/seq/3.webp
+https://thisismagma.com/assets/home/roadmap/seq/4.webp
+https://thisismagma.com/assets/home/roadmap/seq/5.webp
+https://thisismagma.com/assets/home/roadmap/seq/6.webp
+https://thisismagma.com/assets/home/roadmap/seq/7.webp
+https://thisismagma.com/assets/home/roadmap/seq/8.webp
+https://thisismagma.com/assets/home/roadmap/seq/9.webp
+https://thisismagma.com/assets/home/roadmap/seq/10.webp
+https://thisismagma.com/assets/home/roadmap/seq/11.webp
+https://thisismagma.com/assets/home/roadmap/seq/12.webp
+https://thisismagma.com/assets/home/roadmap/seq/13.webp
+https://thisismagma.com/assets/home/roadmap/seq/14.webp
+https://thisismagma.com/assets/home/roadmap/seq/15.webp
+https://thisismagma.com/assets/home/roadmap/seq/16.webp
+https://thisismagma.com/assets/home/roadmap/seq/17.webp
+https://thisismagma.com/assets/home/roadmap/seq/18.webp
+https://thisismagma.com/assets/home/roadmap/seq/19.webp
+https://thisismagma.com/assets/home/roadmap/seq/20.webp
+https://thisismagma.com/assets/home/roadmap/seq/21.webp
+https://thisismagma.com/assets/home/roadmap/seq/22.webp
+https://thisismagma.com/assets/home/roadmap/seq/23.webp
+https://thisismagma.com/assets/home/roadmap/seq/24.webp
+https://thisismagma.com/assets/home/roadmap/seq/25.webp
+https://thisismagma.com/assets/home/roadmap/seq/26.webp
+https://thisismagma.com/assets/home/roadmap/seq/27.webp
+https://thisismagma.com/assets/home/roadmap/seq/28.webp
+https://thisismagma.com/assets/home/roadmap/seq/29.webp
+https://thisismagma.com/assets/home/roadmap/seq/30.webp
+https://thisismagma.com/assets/home/roadmap/seq/31.webp
+https://thisismagma.com/assets/home/roadmap/seq/32.webp
+https://thisismagma.com/assets/home/roadmap/seq/33.webp
+https://thisismagma.com/assets/home/roadmap/seq/34.webp
+https://thisismagma.com/assets/home/roadmap/seq/35.webp
+https://thisismagma.com/assets/home/roadmap/seq/36.webp
+https://thisismagma.com/assets/home/roadmap/seq/37.webp
+https://thisismagma.com/assets/home/roadmap/seq/38.webp
+https://thisismagma.com/assets/home/roadmap/seq/39.webp
+https://thisismagma.com/assets/home/roadmap/seq/40.webp
+https://thisismagma.com/assets/home/roadmap/seq/41.webp
+https://thisismagma.com/assets/home/roadmap/seq/42.webp
+https://thisismagma.com/assets/home/roadmap/seq/43.webp
+https://thisismagma.com/assets/home/roadmap/seq/44.webp
+https://thisismagma.com/assets/home/roadmap/seq/45.webp
+https://thisismagma.com/assets/home/roadmap/seq/46.webp
+https://thisismagma.com/assets/home/roadmap/seq/47.webp
+https://thisismagma.com/assets/home/roadmap/seq/48.webp
+https://thisismagma.com/assets/home/roadmap/seq/49.webp
+https://thisismagma.com/assets/home/roadmap/seq/50.webp
+https://thisismagma.com/assets/home/roadmap/seq/51.webp
+https://thisismagma.com/assets/home/roadmap/seq/52.webp
+https://thisismagma.com/assets/home/roadmap/seq/53.webp
+https://thisismagma.com/assets/home/roadmap/seq/54.webp
+https://thisismagma.com/assets/home/roadmap/seq/55.webp
+https://thisismagma.com/assets/home/roadmap/seq/56.webp
+https://thisismagma.com/assets/home/roadmap/seq/57.webp
+https://thisismagma.com/assets/home/roadmap/seq/58.webp
+https://thisismagma.com/assets/home/roadmap/seq/59.webp
+https://thisismagma.com/assets/home/roadmap/seq/60.webp
+https://thisismagma.com/assets/home/roadmap/seq/61.webp
+https://thisismagma.com/assets/home/roadmap/seq/62.webp
+https://thisismagma.com/assets/home/roadmap/seq/63.webp
+https://thisismagma.com/assets/home/roadmap/seq/64.webp
+https://thisismagma.com/assets/home/roadmap/seq/65.webp
+https://thisismagma.com/assets/home/roadmap/seq/66.webp
+https://thisismagma.com/assets/home/roadmap/seq/67.webp
+https://thisismagma.com/assets/home/roadmap/seq/68.webp
+https://thisismagma.com/assets/home/roadmap/seq/69.webp
+https://thisismagma.com/assets/home/roadmap/seq/70.webp
+https://thisismagma.com/assets/home/roadmap/seq/71.webp
+https://thisismagma.com/assets/home/roadmap/seq/72.webp
+https://thisismagma.com/assets/home/roadmap/seq/73.webp
+https://thisismagma.com/assets/home/roadmap/seq/74.webp
+https://thisismagma.com/assets/home/roadmap/seq/75.webp
+
+`;
+return data.split("\n")[index];
+}
+
+const frameCount = 77;
+
+const images = [];
+const imageSeq = {
+frame: 1,
+};
+
+for (let i = 0; i < frameCount; i++) {
+const img = new Image();
+img.src = files(i);
+images.push(img);
+}
+
+gsap.to(imageSeq, {
+frame: frameCount - 1,
+snap: "frame",
+ease: `none`,
+scrollTrigger: {
+  scrub: .5,
+  trigger: `#page11-right`,
+  start: `top top`,
+  end: `50% top`,
+  scroller: `#main`,
+},
+onUpdate: render,
+});
+
+images[1].onload = render;
+
+function render() {
+scaleImage(images[imageSeq.frame], context);
+}
+
+function scaleImage(img, ctx) {
+var canvas = ctx.canvas;
+var hRatio = canvas.width / img.width;
+var vRatio = canvas.height / img.height;
+var ratio = Math.min(hRatio, vRatio);
+var centerShift_x = (canvas.width - img.width * ratio) / 2;
+var centerShift_y = (canvas.height - img.height * ratio) / 2;
+ctx.clearRect(1000, 1000, canvas.width, canvas.height);
+ctx.drawImage(
+  img,
+  0,
+  0,
+  img.width,
+  img.height,
+  centerShift_x,
+  centerShift_y,
+  img.width * ratio,
+  img.height * ratio
+);
+}
+ScrollTrigger.create({
+
+trigger: "#page11-right",
+pin: true,
+scroller: `#main`,
+start: `top top`,
+end: `50% top`,
+});
+}
+canvas3()
+
+gsap.to("#page11 > #page11-left > #page11-left-textcontent > #textcontent1",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent1",
+    scroller:"#main",
+    start: "top 50%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#fff"
+})
+
+gsap.from("#page11 > #page11-left > #page11-left-textcontent > #textcontent1",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent1",
+    scroller:"#main",
+    start: "top 20%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#dadada69"
+})
+
+gsap.to("#page11 > #page11-left > #page11-left-textcontent > #textcontent2",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent2",
+    scroller:"#main",
+    start: "top 80%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#fff"
+})
+
+gsap.from("#page11 > #page11-left > #page11-left-textcontent > #textcontent2",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent2",
+    scroller:"#main",
+    start: "top 20%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#dadada69"
+})
+
+
+gsap.to("#page11 > #page11-left > #page11-left-textcontent > #textcontent3",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent3",
+    scroller:"#main",
+    start: "top 90%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#fff"
+})
+
+gsap.from("#page11 > #page11-left > #page11-left-textcontent > #textcontent3",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent3",
+    scroller:"#main",
+    start: "top 30%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#dadada69"
+})
+
+gsap.to("#page11 > #page11-left > #page11-left-textcontent > #textcontent4",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent4",
+    scroller:"#main",
+    start: "top 80%",
+    end: "top 50%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#fff"
+})
+
+gsap.from("#page11 > #page11-left > #page11-left-textcontent > #textcontent4",{
+  scrollTrigger: {
+    trigger: "#page11 > #page11-left > #page11-left-textcontent > #textcontent4",
+    scroller:"#main",
+    start: "bottom 50%",
+    end: "top 30%",
+    scrub:.5,
+    // markers:true,
+  },
+  stagger: .2,
+  color: "#dadada69"
+})
