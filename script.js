@@ -643,3 +643,23 @@ gsap.to("#page7-circle-inner",{
   },
   backgroundColor: "#0a3bc391"
 })
+
+// var clutter = "";
+// document.querySelector("#page11-left #page11-left-textcontent #textcontent1").textContent.split('').forEach(function(dets){
+//     clutter += `<span>${dets}</span>`
+
+//     document.querySelector("#page11-left #page11-left-textcontent #textcontent1").innerHTML = clutter;
+// })
+
+// gsap.to("#page11-left #page11-left-textcontent #textcontent1",{
+//   scrollTrigger: {
+//     trigger: "#page11-left #page11-left-textcontent #textcontent1",
+//     scroller:"#main",
+//     start: "top bottom",
+//     end: "bottom top",
+//     scrub:.5,
+//     // markers:true,
+//   },
+//   stagger: .2,
+//   color: `#fff`,
+// })

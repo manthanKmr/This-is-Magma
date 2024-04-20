@@ -476,7 +476,8 @@ body {
 #page11{
   display: flex;
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 200vh;
   width: 100vw;
   background: #02268e;
 }
@@ -487,7 +488,9 @@ body {
   position: relative;
   height: 100%;
   width: 45%;
-  background: red;
+  /* background: red; */
+  /* overflow:auto; */
+
 }
 
 #page11-left > h1{
@@ -503,34 +506,32 @@ body {
 }
 
 #page11-left > #line{
-  top: 20%;
+  top: 11.5%;
   left: 20%;
   position: relative;
   width: 1px;
-  height: 100vh;
-  background: white;
-  /* background: #0a3cce; */
-}
-
-#page11-left > #line-circle{
-  position: absolute;
-  left: 19.5%;
-  top: 37%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
+  height: 116vh;
+  background: #0a3cce;
 }
 
 #page11-left > #page11-left-textcontent{
   position: absolute;
-  top: 37%;
+  top: 20%;
   left: 25%;
 }
 
 #page11-left > #page11-left-textcontent > #textcontent1, #textcontent2, #textcontent3, #textcontent4{
   font-family: a;
   color: #fff;
+}
+
+#page11-left > #page11-left-textcontent > #textcontent1> #line-circle, #textcontent2> #line-circle, #textcontent3> #line-circle, #textcontent4> #line-circle{
+  position: absolute;
+  left: -7.4%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #0a3cce;
 }
 
 #page11-left > #page11-left-textcontent > #textcontent1> #number, #textcontent2> #number, #textcontent3> #number, #textcontent4 > #number{
@@ -555,17 +556,24 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
+#page11-left > #page11-left-textcontent > #textcontent2, #textcontent3, #textcontent4{
+  margin-top: 120px;
+}
+
 #page11-right{
   position: relative;
   height: 100%;
   width: 55%;
+  /* position: fixed;
+  bottom: -63%;
+  right: 0%; */
   /* background: yellow; */
 }
 
 
 #page11-right > img{
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
