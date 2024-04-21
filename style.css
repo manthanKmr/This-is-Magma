@@ -675,6 +675,7 @@ body {
   font-size: 120px;
   font-weight: 100;
   letter-spacing: -5px;
+  cursor: default;
   /* background: red; */
 }
 
@@ -692,6 +693,7 @@ body {
   align-items: center;
   justify-content:center;
   gap: 60px;
+  cursor: pointer;
   /* background: brown; */
 }
 
@@ -841,9 +843,218 @@ body {
 #page15{
   position: relative;
   width: 100vw;
-  height: 100vh;
-  background: #000;
+  height: 70vh;
+  background: #0f0f17;
 }
 
+#page15 > #page15-inner-text{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  font-family: a;
+}
+
+#page15 > #page15-inner-text >h1{
+  font-weight: 320;
+  font-size: 120px;
+  width: 45%;
+  line-height: 120px;
+  padding-top: 150px;
+  padding-left: 150px;
+}
+
+#page15 > #page15-inner-text > button {
+  padding: 15px 45px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: a;
+  font-weight: 400;
+  background: #0a3cce;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  margin-left: 150px;
+  margin-top: 80px;
+  transition: all .5s ease;
+}
+
+#page15 > #page15-inner-text > button:hover{
+  color:#0a3cce;
+  background: #fff;
+}
+
+#page16{
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  background: #0f0f17;
+}
+
+#page16 > #page16-inner{
+  position: relative;
+  height: 33.3%;
+  width: 100%;
+  font-family: a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+  border-top: .5px solid #ffffff2d;
+  border-bottom: .5px solid #ffffff18;
+  cursor: pointer;
+  /* background: greenyellow; */
+}
+
+#page16 > #page16-inner > h1{
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 99;
+}
+
+#page16 > #page16-inner > i{
+  font-size: 45px;
+  font-weight: 100;
+  position: relative;
+  z-index: 99;
+}
+
+#page16 > #page16-inner > #page16-inner-center{
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #0a3cce;
+  transition: all .5s ease;
+}
+
+#page16 > #page16-inner:hover #page16-inner-center{
+  height: 100%;
+}
+
+#page17{
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  background:#0f0f17 ;
+}
+
+#page17 > #page17-inner{
+  width: 100%;
+  height: 100%;
+  /* background: red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 150px;
+}
+
+#page17 > #page17-inner > #page17-inner-links{
+  height: 100%;
+  width: 30%;
+  font-family: a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+#page17 > #page17-inner > #page17-inner-links > #page17-inner-links-row > h1{
+  font-size: 20px;
+  font-weight: 350;
+  text-transform: uppercase;
+  margin-top: 15px;
+  cursor: pointer;
+  position: relative;
+  /* padding: 0px 10px; */
+}
+
+#page17 > #page17-inner > #page17-inner-links> #page17-inner-links-row > h1::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  background: #fff;
+  bottom: -2px;
+  left: 0;
+  transition: width .5s ease;
+}
+
+#page17 > #page17-inner > #page17-inner-links> #page17-inner-links-row > h1:hover::after{
+  width: 100%;
+}
+
+#page17 > #page17-inner > #page17-inner-subscribe{
+  width: 30%;
+  margin-right: 80px;
+}
+
+#page17 > #page17-inner > #page17-inner-subscribe > h1{
+  font-size: 30px;
+  font-weight: 350;
+  font-family: a;
+  color: #fff;
+  cursor: default;
+}
+
+#page17 > #page17-inner > #page17-inner-subscribe > #page17-inner-subscribe-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff18;
+  font-family: a;
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+#page17 > #page17-inner > #page17-inner-subscribe > #page17-inner-subscribe-email > h2{
+  font-weight: 100;
+  font-size: 20px;
+}
+
+#page17 > #page17-inner > #page17-inner-subscribe > #page17-inner-subscribe-email > i{
+  font-size: 20px;
+  transition: all .5s ease;
+}
+
+#page17 > #page17-inner > #page17-inner-subscribe > #page17-inner-subscribe-email:hover i{
+  transform: translateX(5px);
+}
+
+#page17 > #page17-inner > #page17-inner-owner{
+  position: absolute;
+  bottom: 15%;
+  font-family: a;
+  color: #fff;
+}
+
+#page17 > #page17-inner > #page17-inner-owner > h1{
+  font-size: 18px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+#page17 > #page17-inner > #page17-inner-owner > h1>  a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#page17 > #page17-inner > #page17-inner-owner > h1>  a > i{
+  display: inline-block;
+  transition: all .5s ease;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+#page17 > #page17-inner > #page17-inner-owner > h1:hover i{
+  scale: 1.5;
+}
 
 
