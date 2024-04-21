@@ -458,7 +458,6 @@ body {
 
 #page10-right-inner > h1{
   font-family: a;
-  font-weight: 100;
   font-size: 30px;
   color: #fff;
   font-weight: 600;
@@ -682,30 +681,39 @@ body {
 #page13 > #page13-blogs{
   width: 100%;
   height: 70%;
-  /* background: yellow; */
   position: relative;
+  /* background: yellow; */
 }
 
 #page13 > #page13-blogs > #page13-blogs-inner1, #page13-blogs-inner2, #page13-blogs-inner3{
   width: 100%;
   height: 23.3%;
-  /* background: brown; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   gap: 60px;
+  /* background: brown; */
 }
 
 #page13 > #page13-blogs > #page13-blogs-inner2, #page13-blogs-inner3{
   margin-top: 30px;
 }
 
+#page13 > #page13-blogs > #page13-blogs-inner1 > #page13-blogs-text, #page13-blogs-inner2 > #page13-blogs-text, #page13-blogs-inner3 > #page13-blogs-text{
+  width: 40%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #page13 > #page13-blogs > #page13-blogs-inner1 > #page13-blogs-imageholder, #page13-blogs-inner2 > #page13-blogs-imageholder, #page13-blogs-inner3 > #page13-blogs-imageholder{
   width: 800px;
   height: 250px;
-  /* background: green; */
   border-radius: 20px;
   overflow: hidden;
+  /* background: green; */
 }
 
 #page13 > #page13-blogs > #page13-blogs-inner1 > #page13-blogs-imageholder >img, #page13-blogs-inner2 > #page13-blogs-imageholder >img, #page13-blogs-inner3 > #page13-blogs-imageholder >img{
@@ -731,3 +739,111 @@ body {
   color: rgb(15, 15, 23);
   font-weight:100;
 }
+
+#page13 > #page13-blogs > #page13-button{
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#page13 > #page13-blogs > #page13-button > button{
+  padding: 15px 50px;
+  font-size: 18px;
+  color: #0c4cf4;
+  font-family: a;
+  font-weight: 400;
+  border: 1px solid #0c4cf4;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+}
+
+#page13 > #page13-blogs > #page13-button > button > i{
+  margin-left: 10px;
+  display: inline-block;
+  transition: all .5s ease;
+}
+
+#page13 > #page13-blogs > #page13-button > button:hover > i{
+  transform: translateX(5px);
+}
+
+#page14{
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  background: #02268e;
+}
+
+#page14 > #page14-inner-text{
+  position: absolute;
+  top: 20%;
+  right: -30%;
+  color: #fff;
+  font-family: a;
+}
+
+#page14 > #page14-inner-text > h1{
+  font-size: 120px;
+  font-weight: 320;
+  letter-spacing: -2px;
+}
+
+#page14 > #page14-inner-text > p{
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 320;
+  color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+}
+
+#page14 > #page14-scroller{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+  top: 70%;
+  z-index: 10;
+}
+
+#page14 > #page14-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+#page14 > #page14-scroller> #page14-scroller-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+#page14 > #page14-scroller > #page14-scroller-in > img{
+  display: inline;
+  margin-right: 30px;
+  cursor: default;
+  width: 10%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+#page15{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+
+
